@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.swing.*;
@@ -49,23 +50,20 @@ public class GUI extends JFrame {
     	super("Winter is Coming");
     	
    	   	Logica logica = new Logica();
-   	   	
    	   	LanguageConfig resource= new LanguageConfig();
    	   	resource.setSpanish();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(150, 150, 720	, 500);
+        setBounds(150, 250, 750	, 400);
         contentPane = new JPanel();
         contentPane.setLayout(null);
         setContentPane(contentPane);
  
-        
- 
         JButton btnCargar = new JButton(resource.read("Cargar"));
-        btnCargar.setBounds(300, 25, 180, 40);
+        btnCargar.setBounds(360, 25, 180, 40);
         contentPane.add(btnCargar);
  
         JButton btnComenzar = new JButton(resource.read("Comenzar"));
-        btnComenzar.setBounds(490,25,180,40);
+        btnComenzar.setBounds(560,25,180,40);
         contentPane.add(btnComenzar);
         
         JButton btnEspañol = new JButton(resource.read("Español"));
@@ -73,19 +71,19 @@ public class GUI extends JFrame {
         contentPane.add(btnEspañol);
         
         JButton btnIngles = new JButton(resource.read("Ingles"));
-        btnIngles.setBounds(600,300,100,35);
+        btnIngles.setBounds(605,300,100,35);
         contentPane.add(btnIngles);
         
         
-        JLabel label = new JLabel();
-        label.setBounds(35, 25, 180, 40);
-        label.setText(resource.read("Resultado"));
+        JLabel label = new JLabel(resource.read("Resultado"));
+        label.setBounds(35, 35, 300, 40);
         contentPane.add(label);
         
         textArea = new JTextArea();
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        textArea.setBounds(52, 76, 400, 206);
+       textArea.setLineWrap(true);
+       textArea.setWrapStyleWord(true);
+        textArea.setBounds(152, 176, 300, 200);
+        textArea.setEditable(false);
        
         JScrollPane scroll=new JScrollPane(textArea);
         scroll.setBounds(52, 76, 400, 206);

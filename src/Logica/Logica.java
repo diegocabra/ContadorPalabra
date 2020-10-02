@@ -8,7 +8,7 @@ import java.util.TreeSet;
 import TDAColaPrioridad.*;
 public class Logica {
 private HashMap <String,Integer> mapeoContador;
- 
+private Integer cantidadPalabras; 
 public Logica() {
 	 mapeoContador = new HashMap<>();	
 
@@ -28,7 +28,7 @@ public Logica() {
 
             
             	  while ( tokenizer.hasMoreTokens() ) 
-
+            		 
             	  {
 
             	  String palabra = tokenizer.nextToken().toLowerCase(); 
@@ -70,8 +70,10 @@ public Logica() {
       	{
     	  try {
       		
-      		Cadena= Cadena+ Heap.min().getValue()+"            "+Heap.removeMin().getKey()+"";
-      		Cadena=Cadena+"\n";
+      		Cadena= Cadena+ Heap.min().getValue()+"            "+ Heap.removeMin().getKey();
+      		//Double porcentaje = (double) Heap.removeMin().getKey()*100;
+      		
+      		Cadena=Cadena+"%\n";
 		} catch (EmptyPriorityQueueException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
