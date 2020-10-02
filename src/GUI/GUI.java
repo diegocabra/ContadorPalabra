@@ -61,11 +61,11 @@ public class GUI extends JFrame {
         
  
         JButton btnCargar = new JButton(resource.read("Cargar"));
-        btnCargar.setBounds(288, 25, 180, 40);
+        btnCargar.setBounds(300, 25, 180, 40);
         contentPane.add(btnCargar);
  
         JButton btnComenzar = new JButton(resource.read("Comenzar"));
-        btnComenzar.setBounds(500,25,180,40);
+        btnComenzar.setBounds(490,25,180,40);
         contentPane.add(btnComenzar);
         
         JButton btnEspañol = new JButton(resource.read("Español"));
@@ -78,8 +78,8 @@ public class GUI extends JFrame {
         
         
         JLabel label = new JLabel();
-        label.setBounds(188, 25, 180, 40);
-        label.setText(resource.read("Bienvenido"));
+        label.setBounds(35, 25, 180, 40);
+        label.setText(resource.read("Resultado"));
         contentPane.add(label);
         
         textArea = new JTextArea();
@@ -141,7 +141,10 @@ public class GUI extends JFrame {
 				}
 					if(Cadena == "")
 						JOptionPane.showMessageDialog(null,resource.read("FallaDirectorio"));
-					else textArea.setText(Cadena);
+					
+					else {
+						textArea.setText(Cadena);
+					}
                  
             }
  
@@ -155,7 +158,7 @@ public class GUI extends JFrame {
                 btnComenzar.setText(resource.read("Comenzar")); 
                 btnIngles.setText(resource.read("Ingles"));
                 btnEspañol.setText(resource.read("Español"));
-                label.setText(resource.read("Bienvenido"));
+                label.setText(resource.read("Resultado"));
                 
             } 
 });
@@ -167,7 +170,7 @@ public class GUI extends JFrame {
                 btnComenzar.setText(resource.read("Comenzar")); 
                 btnIngles.setText(resource.read("Ingles"));
                 btnEspañol.setText(resource.read("Español"));
-                label.setText(resource.read("Bienvenido"));
+                label.setText(resource.read("Resultado"));
 
             } 
 });
