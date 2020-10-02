@@ -7,11 +7,10 @@ import java.util.StringTokenizer;
 import java.util.TreeSet;
 import TDAColaPrioridad.*;
 public class Logica {
+	
 private HashMap <String,Integer> mapeoContador;
-private Integer cantidadPalabras; 
 public Logica() {
 	 mapeoContador = new HashMap<>();	
-
 }
 
 
@@ -37,7 +36,8 @@ public Logica() {
 
             	  {  int cuenta = mapeoContador.get( palabra );
 
-            	  mapeoContador.put( palabra, cuenta + 1 );} 
+            	  mapeoContador.put( palabra, cuenta + 1 );
+            	  } 
             	  else
 
             		  mapeoContador.put( palabra, 1 ); 
@@ -73,7 +73,7 @@ public Logica() {
       		Cadena= Cadena+ Heap.min().getValue()+"            "+ Heap.removeMin().getKey();
       		//Double porcentaje = (double) Heap.removeMin().getKey()*100;
       		
-      		Cadena=Cadena+"%\n";
+      		Cadena=Cadena+"\n";
 		} catch (EmptyPriorityQueueException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
